@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    geo_coder (0.1.1)
+      sqlite3-ruby (= 1.2.5)
+      text
+    sqlite3-ruby (1.2.5)
+    text (1.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  geo_coder
