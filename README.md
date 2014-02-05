@@ -1,3 +1,5 @@
+Available on Cloud9 IDE: git@github.com:sabind/learn-2-code-ruby.git
+
 RUBY Version: 1.9.3 (this is limited by what cloud9 IDE includes on its servers)
 
 We're going to be creating various coding challanges and answers.
