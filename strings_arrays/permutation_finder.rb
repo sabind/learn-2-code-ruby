@@ -38,27 +38,3 @@ def is_permutation?(input, test)
         result
     end
 end
-
-puts 'Testing with is_permuation_set?'
-puts 'All these should be true'
-simple_string_permutations.each do |test|
-    puts is_permutation_set?(simple_string, test)
-end
-
-puts 'All these should be false'
-simple_string_not_permutations.each do |test|
-    puts is_permutation_set?(simple_string, test)
-end
-
-puts ''
-
-puts 'Testing with is_permuation?'
-puts 'All these should be true'
-simple_string_permutations.each do |test|
-    puts is_permutation?(simple_string, test)
-end
-
-puts 'All these should be false'
-simple_string_not_permutations.each do |test|
-    puts is_permutation?(simple_string, test)
-end

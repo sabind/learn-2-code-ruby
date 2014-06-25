@@ -8,7 +8,7 @@ really_bad_case = nil
 even_case = '123456'
 
 # Reversing a string is easy. Use the String API and call .reverse()
-def reverse(input)
+def reverse_api(input)
     # In ruby you can add conditionals at the end of a line. If the conditional
     # passes the line is run. Otherwise it returns nil. You can use this in assignemnt
     # conditions as well like 'a = 1 if true'. And it it's false remeber that the
@@ -76,36 +76,3 @@ def swap(input, index1, index2)
     output[index2] = c
     output
 end
-
-# Lets print out some tests
-puts "Testing with reverse"
-puts "Testing '#{simple_string}': #{reverse(simple_string)}"
-puts "Testing '#{simple_string_fail}': #{reverse(simple_string_fail)}"
-puts "Testing '#{numbers_are_chars_too}': #{reverse(numbers_are_chars_too)}"
-puts "Testing '#{spaces}': #{reverse(spaces)}"
-puts "Testing '#{bad_case}': #{reverse(bad_case)}"
-puts "Testing '#{really_bad_case}': #{reverse(really_bad_case)}"
-puts "Testing '#{really_bad_case}': #{reverse(even_case.clone)}"
-
-puts ""
-
-puts "Testing with reverse_non_api"
-puts "Testing '#{simple_string}': #{reverse_non_api(simple_string)}"
-puts "Testing '#{simple_string_fail}': #{reverse_non_api(simple_string_fail)}"
-puts "Testing '#{numbers_are_chars_too}': #{reverse_non_api(numbers_are_chars_too)}"
-puts "Testing '#{spaces}': #{reverse_non_api(spaces)}"
-puts "Testing '#{bad_case}': #{reverse_non_api(bad_case)}"
-puts "Testing '#{really_bad_case}': #{reverse_non_api(really_bad_case)}"
-puts "Testing '#{really_bad_case}': #{reverse_non_api(even_case)}"
-
-puts ""
-
-# NOTICE: We need to clone the strings. Otherwise the reverse in place will mutate our test data permanently.
-puts "Testing with reverse_in_place"
-puts "Testing '#{simple_string}': #{reverse_in_place(simple_string.clone)}"
-puts "Testing '#{simple_string_fail}': #{reverse_in_place(simple_string_fail.clone)}"
-puts "Testing '#{numbers_are_chars_too}': #{reverse_in_place(numbers_are_chars_too.clone)}"
-puts "Testing '#{spaces}': #{reverse_in_place(spaces.clone)}"
-puts "Testing '#{bad_case}': #{reverse_in_place(bad_case.clone)}"
-puts "Testing '#{really_bad_case}': #{reverse_in_place(really_bad_case)}"
-puts "Testing '#{really_bad_case}': #{reverse_in_place(even_case.clone)}"

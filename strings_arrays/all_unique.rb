@@ -71,32 +71,3 @@ def is_unique_using_sets?(input)
         false
     end
 end
-
-# Lets print out some tests
-puts "Testing with is_unique?"
-puts "Testing '#{simple_string}': #{is_unique?(simple_string)}"
-puts "Testing '#{simple_string_fail}': #{is_unique?(simple_string_fail)}"
-puts "Testing '#{numbers_are_chars_too}': #{is_unique?(numbers_are_chars_too)}"
-puts "Testing '#{spaces}': #{is_unique?(spaces)}"
-puts "Testing '#{bad_case}': #{is_unique?(bad_case)}"
-puts "Testing '#{really_bad_case}': #{is_unique?(really_bad_case)}"
-
-puts ""
-
-puts "Testing with is_unique_in_place?"
-puts "Testing '#{simple_string}': #{is_unique_in_place?(simple_string)}"
-puts "Testing '#{simple_string_fail}': #{is_unique_in_place?(simple_string_fail)}"
-puts "Testing '#{numbers_are_chars_too}': #{is_unique_in_place?(numbers_are_chars_too)}"
-puts "Testing '#{spaces}': #{is_unique_in_place?(spaces)}"
-puts "Testing '#{bad_case}': #{is_unique_in_place?(bad_case)}"
-puts "Testing '#{really_bad_case}': #{is_unique_in_place?(really_bad_case)}"
-
-puts ""
-
-puts "Testing with is_unique_using_sets?"
-puts "Testing '#{simple_string}': #{is_unique_using_sets?(simple_string)}"
-puts "Testing '#{simple_string_fail}': #{is_unique_using_sets?(simple_string_fail)}"
-puts "Testing '#{numbers_are_chars_too}': #{is_unique_using_sets?(numbers_are_chars_too)}"
-puts "Testing '#{spaces}': #{is_unique_using_sets?(spaces)}"
-puts "Testing '#{bad_case}': #{is_unique_using_sets?(bad_case)}"
-puts "Testing '#{really_bad_case}': #{is_unique_using_sets?(really_bad_case)}"
