@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.1.2-p95
+
+gemfile:
+  - Gemfile
+
+before_install:
+  - echo "Before Install"
+
+script:
+  - rspec
+
+after_success:
+  - echo "DONE and SUCCESS!"
