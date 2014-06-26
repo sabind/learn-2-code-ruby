@@ -7,6 +7,7 @@ gemfile:
 
 before_install:
   - echo "Before Install"
+  - bundle install
 
 script:
   - rspec
