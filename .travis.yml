@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - "2.1.2"
+
+gemfile:
+  - Gemfile
+
+before_install:
+  - echo "Before Install"
+  - bundle install
+
+script:
+  - rspec
+
+after_success:
+  - echo "DONE and SUCCESS!"
