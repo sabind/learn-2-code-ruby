@@ -9,6 +9,16 @@
 # well as what the intended replacement is.
 
 def simple_encode(input, key_map)
+  
+  # NEVER trust input to be valid. Always double check it.
+  if !input
+    return nil
+  end
+  
+  if !key_map
+    return input
+  end
+  
   encoded_string = ''
   
   input.chars.each do |character|
@@ -31,18 +41,28 @@ end
 # we're modifying in place and the side_effects will change the input permanently
 
 def in_place_encode!(input, key_map)
+  
+  # NEVER trust input to be valid. Always double check it.
+  if !input
+    return nil
+  end
+  
+  if !key_map
+    return input
+  end
+  
   # we can not use an 'iterator for this operation. Iterators like 'each' do not
   # work well with insertion and deletation. Since we're growing the array by 
   # inserting potentially longer sequences we'll create some straange behavior.
   # For that reason we have to use a simple for loop.
   i = 0
-  until i > input.length  do
+  while i < input.length  do
     if key_map[input[i]]
       input[i] = key_map[input[i]]
       
       # increment the index by length of the new value since we're inserting the
       # new characters and we don't want to encode the encoding.
-      i += key_map[input.chars[i]].length
+      i += key_map[input[i]].length
     else
       i +=1
     end

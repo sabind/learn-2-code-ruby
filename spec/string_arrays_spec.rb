@@ -174,4 +174,98 @@ describe 'Strings and Arrays: ' do
       end
     end
   end
+  
+  describe 'Encode' do
+    describe '#simple_encode' do
+      it 'should not do anything if it is given an empty key map' do
+        expect(simple_string).to eq(simple_encode(simple_string, {}))
+      end
+      
+      it 'should handle nil input' do
+        expect(nil).to eq(simple_encode(nil, {}))
+      end
+      
+      it 'should handle nil key map' do
+        expect(simple_string).to eq(simple_encode(simple_string, nil))
+      end
+      
+      it 'should handle nil input and key map' do
+        expect(nil).to eq(simple_encode(nil, nil))
+      end
+      
+      it 'should be able to replace single characters with single characters' do
+        expect('b').to eq(simple_encode('a', {'a' => 'b'}))
+      end
+      
+      it 'should be able to replace single characters with multiple characters' do
+        expect('bb').to eq(simple_encode('a', {'a' => 'bb'}))
+      end
+      
+      it 'should be able to replace single characters in a string with single characters' do
+        expect('bzz').to eq(simple_encode('azz', {'a' => 'b'}))
+      end
+      
+      it 'should be able to replace multiple single characters in a string with single characters' do
+        expect('bz bz').to eq(simple_encode('az az', {'a' => 'b'}))
+      end
+      
+      it 'should be able to replace single characters in a string with multiple characters' do
+        expect('bbzz').to eq(simple_encode('azz', {'a' => 'bb'}))
+      end
+      
+      it 'should be able to replace multiple single characters in a string with multiple characters' do
+        expect('bbz bbz').to eq(simple_encode('az az', {'a' => 'bb'}))
+      end
+    end
+    
+    describe '#in_place_encode!' do
+      it 'should not do anything if it is given an empty key map' do
+        input = 'a'
+        in_place_encode!(input, {})
+        expect('a').to eq(input)
+      end
+      
+      it 'should handle nil input' do
+        input = nil
+        in_place_encode!(input, {})
+        expect(nil).to eq(input)
+      end
+      
+      it 'should handle nil key map' do
+        input = 'a'
+        in_place_encode!(input, nil)
+        expect('a').to eq(input)
+      end
+      
+      it 'should handle nil input and key map' do
+        input = nil
+        in_place_encode!(input, nil)
+        expect(nil).to eq(input)
+      end
+      
+      it 'should be able to replace single characters with single characters' do
+        expect('b').to eq(in_place_encode!('a', {'a' => 'b'}))
+      end
+      
+      it 'should be able to replace single characters with multiple characters' do
+        expect('bb').to eq(in_place_encode!('a', {'a' => 'bb'}))
+      end
+      
+      it 'should be able to replace single characters in a string with single characters' do
+        expect('bzz').to eq(in_place_encode!('azz', {'a' => 'b'}))
+      end
+      
+      it 'should be able to replace multiple single characters in a string with single characters' do
+        expect('bz bz').to eq(in_place_encode!('az az', {'a' => 'b'}))
+      end
+      
+      it 'should be able to replace single characters in a string with multiple characters' do
+        expect('bbzz').to eq(in_place_encode!('azz', {'a' => 'bb'}))
+      end
+      
+      it 'should be able to replace multiple single characters in a string with multiple characters' do
+        expect('bbz bbz').to eq(in_place_encode!('az az', {'a' => 'bb'}))
+      end
+    end
+  end
 end
