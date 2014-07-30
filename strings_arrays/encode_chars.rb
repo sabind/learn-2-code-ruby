@@ -58,11 +58,15 @@ def in_place_encode!(input, key_map)
   i = 0
   while i < input.length  do
     if key_map[input[i]]
+      # Save the length. We're going to be modifying stuff so we won't be able
+      # to retrieve this one we modify the string
+      key_map_length = key_map[input[i]].length
+      
       input[i] = key_map[input[i]]
       
       # increment the index by length of the new value since we're inserting the
       # new characters and we don't want to encode the encoding.
-      i += key_map[input[i]].length
+      i += key_map_length
     else
       i +=1
     end

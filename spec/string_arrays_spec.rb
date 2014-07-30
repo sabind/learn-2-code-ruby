@@ -244,27 +244,39 @@ describe 'Strings and Arrays: ' do
       end
       
       it 'should be able to replace single characters with single characters' do
-        expect('b').to eq(in_place_encode!('a', {'a' => 'b'}))
+        input = 'a'
+        in_place_encode!(input, {'a' => 'b'})
+        expect('b').to eq(input)
       end
       
       it 'should be able to replace single characters with multiple characters' do
-        expect('bb').to eq(in_place_encode!('a', {'a' => 'bb'}))
+        input = 'a'
+        in_place_encode!(input, {'a' => 'bb'})
+        expect('bb').to eq(input)
       end
       
       it 'should be able to replace single characters in a string with single characters' do
-        expect('bzz').to eq(in_place_encode!('azz', {'a' => 'b'}))
+        input = 'azz'
+        in_place_encode!(input, {'a' => 'b'})
+        expect('bzz').to eq(input)
       end
       
       it 'should be able to replace multiple single characters in a string with single characters' do
-        expect('bz bz').to eq(in_place_encode!('az az', {'a' => 'b'}))
+        input = 'az az'
+        in_place_encode!(input, {'a' => 'b'})
+        expect('bz bz').to eq(input)
       end
       
       it 'should be able to replace single characters in a string with multiple characters' do
-        expect('bbzz').to eq(in_place_encode!('azz', {'a' => 'bb'}))
+        input = 'azz'
+        in_place_encode!(input, {'a' => 'bb'})
+        expect('bbzz').to eq(input)
       end
       
       it 'should be able to replace multiple single characters in a string with multiple characters' do
-        expect('bbz bbz').to eq(in_place_encode!('az az', {'a' => 'bb'}))
+        input = 'az az'
+        in_place_encode!(input, {'a' => 'bb'})
+        expect('bbz bbz').to eq(input)
       end
     end
   end
