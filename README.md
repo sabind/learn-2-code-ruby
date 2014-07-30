@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sabind/learn-2-code-ruby.svg?branch=master)](https://travis-ci.org/sabind/learn-2-code-ruby)
+
 Available on Cloud9 IDE: http://c9.io/sabind/ruby-learn-2-code
 
 RUBY Version: 1.9.3 (this is limited by what cloud9 IDE includes on its servers)
