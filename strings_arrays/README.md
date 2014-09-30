@@ -10,10 +10,9 @@ BONUS: Write it using no additional data-structures besides the string (and some
 BONUS: Write it using no additional data-structures besides the string (and some primative variables)
 
 4: Clean up a string of certain characters (', ", -, [space]) and replace them
-with *
+with *'*, *"*, *-*, and *[space]*
 BONUS: Do this using a regex to extract the groups and rebuild the string instead
-BONUS2: Figure out which one is faster (I give you a .5 point rounded down if you
-make the right guess before you see your results)
+BONUS2: Figure out which one is faster
 
 5: Compress the repeated characters in a string. ( aabbccd => a2b2c2d )
 BONUS: Find another way to compress

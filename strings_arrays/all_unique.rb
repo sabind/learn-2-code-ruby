@@ -1,14 +1,5 @@
 require 'set'
 
-#test strings
-simple_string = 'abcde'
-simple_string_fail = 'aabbccddee'
-numbers_are_chars_too = '12345'
-spaces = ' '
-bad_case = ''
-really_bad_case = nil
-
-
 # Ruby has a few convenience methods that we can try to use (only for ruby 1.9.3)
 # String.chars will give us an enum
 # Enum.to_a will give us an array
