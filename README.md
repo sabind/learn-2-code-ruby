@@ -10,3 +10,6 @@ Running 'rspec' from the command line will execute the tests. Reading through th
 failures will give you an idea of what to code. 
 
 The first spec file is about string and array manipulation.
+
+
+All Builds are tested per PR on Travis CI
