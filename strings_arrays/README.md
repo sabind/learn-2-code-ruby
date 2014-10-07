@@ -9,8 +9,7 @@ BONUS: Write it using no additional data-structures besides the string (and some
 3: Write a function to test if a word is a permutation of another word.
 BONUS: Write it using no additional data-structures besides the string (and some primative variables)
 
-4: Clean up a string of certain characters (', ", -, [space]) and replace them
-with *'*, *"*, *-*, and *[space]*
+4: Apply a map to a string that will replace certain characters with others like a -> b or c -> def
 BONUS: Do this using a regex to extract the groups and rebuild the string instead
 BONUS2: Figure out which one is faster
 
